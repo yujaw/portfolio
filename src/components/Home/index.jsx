@@ -1,43 +1,15 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../Footer';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import Navigation from '../Navigation';
 
-
-const About = () => {
-  return (
-    <Fragment>
-      <div className="about">
-        <div className="about-wrapper">
-          <div className="about-content">
-            <div className="left">
-              <div className="title">
-                Yujaw <span>Manandhar</span>
-              </div>
-
-              <div className="content">
-                Hello, I'm Yujaw.
-                <br />
-                <br />
-                I am a developer and student based in Kathmandu, Nepal.
-              </div>
-            </div>
-            <div className="right">
-              <div className="image-container">
-                <div className="image">
-                  <img src="./images/profile.jpg" alt="profile" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Fragment>
-  )
-}
+// TODO add a section below home that shows my works
 
 const Home = () => {
   const [columns, setColumns] = useState(0);
   const [rows, setRows] = useState(0);
+  const [opened, setOpened] = useState(false);
 
   useEffect(() => {
     const newColumns = Math.floor(window.innerWidth / 50);
@@ -105,47 +77,108 @@ const Home = () => {
     tileAnim(col, row);
   };
 
-  const handleMouseHover = (e) => {
-    let { clientX, clientY } = e;
+  useEffect(() => {
+    document.body.style.overflow = 'auto';
+  }, [])
 
-    const hover = document.querySelector('.hover')
+  const toggleMenu = () => {
+    setOpened(!opened);
+    if (!opened) {
+      document.body.style.overflow = 'hidden'; // Disable scrolling when menu is opened
+    } else {
+      document.body.style.overflow = 'auto'; // Enable scrolling when menu is closed
+    }
+  };
 
-    clientX += window.scrollX
-    clientY += window.scrollY
-
-    hover.style.top = `calc(${clientY}px - 100vh)`
-    hover.style.left = `${clientX}px`
+  const Portfolio = () => {
+    return (
+      <Fragment>
+        <div className="portfolio-container">
+          <div className="portfolio">
+            <div className="title-container">
+              <div className="title">Portfolio</div>
+            </div>
+            <div className="content">
+              <Swiper
+                spaceBetween={50}
+                slidesPerView={3}
+              >
+                <SwiperSlide>
+                  <div className="cont">
+                    Hello World'ssss
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="cont">
+                    Hello World'ssss
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="cont">
+                    Hello World'ssss
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="cont">
+                    Hello World'ssss
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="cont">
+                    Hello World'ssss
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+          </div>
+        </div>
+      </Fragment>
+    )
   }
 
   return (
     <Fragment>
       <div className="home-wrapper">
         <div className="home-container" onMouseMove={handleMouseMove}>
-          <div className="home-navigation">
-            <div className="logo-container">
-              <div className="logo">
-                <div className="ico">
 
+          {
+            window.innerWidth > 768
+              ? (
+                <div className="home-navigation">
+                  <div className="logo-container">
+                    <Link className="logo" to={'/'}>
+                      <div className="ico">
+
+                      </div>
+                      <div className="text">
+                        Yujaw
+                      </div>
+                    </Link>
+                  </div>
+                  <div className="navigation-wrapper">
+                    <div className="navigation">
+                      <Link to={'/portfolio'}>portfolio</Link>
+                      <Link to={'/outreach'}>outreach</Link>
+                      <Link to={'/hobby'}>hobbies</Link>
+                      <Link to={'/resume'}>resume</Link>
+                      <Link to={'/about'}>about</Link>
+                    </div>
+                  </div>
                 </div>
-                <div className="text">
-                  Yujaw
+              ) : (
+                <Navigation />
+              )
+          }
+          {
+            window.innerWidth > 768
+              ? (
+                <div className="wrapper" style={{ '--columns': columns, '--rows': rows }}>
+                  {
+                    createGrid()
+                  }
                 </div>
-              </div>
-            </div>
-            <div className="navigation-wrapper">
-              <div className="navigation">
-                <Link to={''}>outreach</Link>
-                <Link to={''}>resume</Link>
-                <Link to={''}>portfolio</Link>
-                <Link to={''}>contact</Link>
-              </div>
-            </div>
-          </div>
-          <div className="wrapper" style={{ '--columns': columns, '--rows': rows }}>
-            {
-              createGrid()
-            }
-          </div>
+              ) : null
+          }
           <div className="content">
             <div className="left">
               <div className='text'>
@@ -159,13 +192,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="home-content-wrapper" onMouseMove={handleMouseHover}>
-          <div className="hover"></div>
-          <About />
-          <Footer />
+        <div className="home-content-wrapper">
+          {/* <Portfolio /> */}
         </div>
       </div>
-    </Fragment>
+    </Fragment >
   );
 };
 
