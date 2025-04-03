@@ -183,7 +183,7 @@ const Home = () => {
                     <div className="content">
                         <div className="left">
                             <div className='text'>
-                                Developer & Student based in Kathmandu, Nepal.
+                                Developer & Student based in Dayton, Ohio.
                             </div>
                         </div>
                         <div className="right">
