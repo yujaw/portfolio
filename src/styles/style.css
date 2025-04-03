@@ -2385,6 +2385,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 3rem;
+    overflow: hidden;
   }
   body .resume-container .resume .project-container .project .title {
     font-weight: 700;

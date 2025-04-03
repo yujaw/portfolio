@@ -2951,6 +2951,7 @@ $color-wood-2: #410A09;
                         flex-direction: column;
                         align-items: flex-start;
                         gap: 3rem;
+                        overflow: hidden;
 
                         .title {
                             font-weight: 700;
