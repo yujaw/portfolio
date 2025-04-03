@@ -10,7 +10,7 @@ const Resume = () => {
                         <div className="download">
                             <div className="title">Resume</div>
                             <div className="content">
-                                Full CV can be downloaded <Link to={'./documents/resume.pdf'} target='_blank' rel='noreferrer'>here</Link>.
+                                Full CV can be downloaded <a href='./documents/resume.pdf' target='_blank' rel='noreferrer'>here</a>.
                             </div>
                         </div>
                     </div>
