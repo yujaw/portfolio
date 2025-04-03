@@ -193,9 +193,6 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className="home-content-wrapper">
-                    <Project />
-                </div>
             </div>
         </Fragment >
     );
