@@ -2303,35 +2303,41 @@
     width: 100%;
     padding-top: 2rem;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
+    gap: 3rem;
   }
   body .resume-container .resume .education-container .education .title {
     font-weight: 700;
     font-size: 1.5rem;
-    width: 40%;
+    width: 100%;
   }
   body .resume-container .resume .education-container .education .content {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 0 0 0.5rem 0;
   }
   body .resume-container .resume .education-container .education .content .item {
+    width: 100%;
     display: flex;
-    align-items: flex-start;
+    align-items: space-between;
     justify-content: space-evenly;
   }
   body .resume-container .resume .education-container .education .content .item .left {
-    width: 15%;
+    width: 40%;
     height: 100%;
+    display: flex;
+    justify-content: center;
   }
   body .resume-container .resume .education-container .education .content .item .left .date {
     font-weight: 200;
     font-size: 0.8rem;
+    line-height: 1rem;
   }
   body .resume-container .resume .education-container .education .content .item .right {
-    width: 70%;
+    width: 60%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -2344,17 +2350,96 @@
   }
   body .resume-container .resume .education-container .education .content .item .right .top .title {
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   body .resume-container .resume .education-container .education .content .item .right .bottom {
     width: 100%;
   }
-  body .resume-container .resume .education-container .education .content .item .right .bottom .content {
+  body .resume-container .resume .education-container .education .content .item .right .bottom a {
+    font-family: "Courier New", Courier, monospace;
+  }
+  body .resume-container .resume .education-container .education .content .item .right .bottom .contents {
     width: 70%;
-    font-weight: 200;
     font-size: 0.8rem;
   }
   body .resume-container .resume .education-container::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 0.5px;
+    top: 0;
+    left: 50%;
+    translate: -50% 0;
+    background: white;
+  }
+  body .resume-container .resume .project-container {
+    width: 100%;
+    position: relative;
+  }
+  body .resume-container .resume .project-container .project {
+    width: 100%;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+  body .resume-container .resume .project-container .project .title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  body .resume-container .resume .project-container .project .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 0 0.5rem 0;
+  }
+  body .resume-container .resume .project-container .project .content .item {
+    width: 100%;
+    display: flex;
+    align-items: space-between;
+    justify-content: space-evenly;
+  }
+  body .resume-container .resume .project-container .project .content .item .left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  body .resume-container .resume .project-container .project .content .item .left .date {
+    font-weight: 200;
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+  body .resume-container .resume .project-container .project .content .item .right {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.25rem;
+  }
+  body .resume-container .resume .project-container .project .content .item .right .top {
+    width: 100%;
+  }
+  body .resume-container .resume .project-container .project .content .item .right .top .title {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  body .resume-container .resume .project-container .project .content .item .right .bottom {
+    width: 100%;
+  }
+  body .resume-container .resume .project-container .project .content .item .right .bottom a {
+    font-family: "Courier New", Courier, monospace;
+  }
+  body .resume-container .resume .project-container .project .content .item .right .bottom .contents {
+    width: 70%;
+    font-size: 0.8rem;
+  }
+  body .resume-container .resume .project-container::before {
     content: "";
     width: 100%;
     position: absolute;
