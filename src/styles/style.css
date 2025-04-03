@@ -2354,12 +2354,14 @@
   }
   body .resume-container .resume .education-container .education .content .item .right .bottom {
     width: 100%;
+    margin: 0 1rem 0 0;
   }
   body .resume-container .resume .education-container .education .content .item .right .bottom a {
     font-family: "Courier New", Courier, monospace;
+    font-size: 0.8rem;
   }
   body .resume-container .resume .education-container .education .content .item .right .bottom .contents {
-    width: 70%;
+    width: 100%;
     font-size: 0.8rem;
   }
   body .resume-container .resume .education-container::before {
@@ -2431,12 +2433,18 @@
   }
   body .resume-container .resume .project-container .project .content .item .right .bottom {
     width: 100%;
+    margin: 0 1rem 0 0;
   }
   body .resume-container .resume .project-container .project .content .item .right .bottom a {
     font-family: "Courier New", Courier, monospace;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    font-size: 0.8rem;
   }
   body .resume-container .resume .project-container .project .content .item .right .bottom .contents {
-    width: 70%;
+    width: 100%;
     font-size: 0.8rem;
   }
   body .resume-container .resume .project-container::before {

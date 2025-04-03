@@ -2910,13 +2910,15 @@ $color-wood-2: #410A09;
 
                                     .bottom {
                                         width: 100%;
+                                        margin: 0 1rem 0 0;
 
                                         a {
                                             font-family: 'Courier New', Courier, monospace;
+                                            font-size: .8rem;
                                         }
 
                                         .contents {
-                                            width: 70%;
+                                            width: 100%;
                                             // font-weight: 200;
                                             font-size: .8rem;
                                         }
@@ -3005,13 +3007,19 @@ $color-wood-2: #410A09;
 
                                     .bottom {
                                         width: 100%;
+                                        margin: 0 1rem 0 0;
 
                                         a {
                                             font-family: 'Courier New', Courier, monospace;
+                                            text-overflow: ellipsis;
+                                            white-space: nowrap;
+                                            width: 100%;
+                                            overflow: hidden;
+                                            font-size: .8rem;
                                         }
 
                                         .contents {
-                                            width: 70%;
+                                            width: 100%;
                                             // font-weight: 200;
                                             font-size: .8rem;
                                         }
