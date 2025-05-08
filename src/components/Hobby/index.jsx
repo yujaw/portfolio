@@ -37,6 +37,18 @@ const Hobby = () => {
                                 </div>
                             </div>
                         </div>
+                        <br />
+                        <div className="item">
+                            <div className="text">
+                                <div className="title">Coding</div>
+                                <div className="sub">Coding is a passion of mine. I developed love for coding since my preteen.</div>
+                            </div>
+                            <div className="image-container">
+                                <div className="image">
+                                    <img src="./images/personal/coding.png" alt="personal" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
