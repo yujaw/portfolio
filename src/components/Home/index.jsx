@@ -1,16 +1,12 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-// import Footer from '../Footer';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-import Project from '../Project'
 import Navigation from '../Navigation';
-
-// TODO add a section below home that shows my works
+import { animate, stagger } from 'animejs';
 
 const Home = () => {
     const [columns, setColumns] = useState(0);
     const [rows, setRows] = useState(0);
-    //   const [opened, setOpened] = useState(false);
+    const [toggle, setToggle] = useState(false);
 
     useEffect(() => {
         const newColumns = Math.floor(window.innerWidth / 50);
@@ -45,102 +41,33 @@ const Home = () => {
         return tiles;
     };
 
-    const tileAnim = (col, row) => {
-        const tileIndex = col + (row - 1) * columns;
-        const tile = document.querySelector(`.tile:nth-child(${tileIndex})`);
+    const handleMouseUp = (e) => {
+        const tiles = document.querySelectorAll('.tile');
+        const tileIndex = Array.from(tiles).indexOf(e.target);
 
-        if (tile) {
-            tile.style.animation = 'hover 1s ease';
+        document.querySelector('.container').classList.toggle('toggle');
+        setToggle(!toggle);
 
-            setTimeout(() => {
-                tile.style.animation = '';
-            }, 800);
-        }
-    };
-
-    const handleMouseMove = (e) => {
-        let { clientX, clientY } = e;
-
-        clientX += window.scrollX
-        clientY += window.scrollY
-
-        let col = Math.floor(clientX / 50) + 1;
-        let row = Math.floor(clientY / 50) + 1;
-
-        if (col > columns) {
-            col = columns;
-        }
-
-        if (row > rows) {
-            row = rows;
-        }
-
-        tileAnim(col, row);
+        animate('.tile', {
+            opacity: toggle ? 1 : 0,
+            easing: 'easeInOutQuad',
+            duration: 100,
+            delay: stagger(50, {
+                grid: [columns, rows],
+                from: tileIndex
+            }
+            )
+        });
     };
 
     useEffect(() => {
         document.body.style.overflow = 'auto';
     }, [])
 
-    //   const toggleMenu = () => {
-    //     setOpened(!opened);
-    //     if (!opened) {
-    //       document.body.style.overflow = 'hidden'; // Disable scrolling when menu is opened
-    //     } else {
-    //       document.body.style.overflow = 'auto'; // Enable scrolling when menu is closed
-    //     }
-    //   };
-
-    //   const Portfolio = () => {
-    //     return (
-    //       <Fragment>
-    //         <div className="portfolio-container">
-    //           <div className="portfolio">
-    //             <div className="title-container">
-    //               <div className="title">Portfolio</div>
-    //             </div>
-    //             <div className="content">
-    //               <Swiper
-    //                 spaceBetween={50}
-    //                 slidesPerView={3}
-    //               >
-    //                 <SwiperSlide>
-    //                   <div className="cont">
-    //                     Hello World'ssss
-    //                   </div>
-    //                 </SwiperSlide>
-    //                 <SwiperSlide>
-    //                   <div className="cont">
-    //                     Hello World'ssss
-    //                   </div>
-    //                 </SwiperSlide>
-    //                 <SwiperSlide>
-    //                   <div className="cont">
-    //                     Hello World'ssss
-    //                   </div>
-    //                 </SwiperSlide>
-    //                 <SwiperSlide>
-    //                   <div className="cont">
-    //                     Hello World'ssss
-    //                   </div>
-    //                 </SwiperSlide>
-    //                 <SwiperSlide>
-    //                   <div className="cont">
-    //                     Hello World'ssss
-    //                   </div>
-    //                 </SwiperSlide>
-    //               </Swiper>
-    //             </div>
-    //           </div>
-    //         </div>
-    //       </Fragment>
-    //     )
-    //   }
-
     return (
         <Fragment>
             <div className="home-wrapper">
-                <div className="home-container" onMouseMove={handleMouseMove}>
+                <div className="home-container" onMouseUp={handleMouseUp}>
 
                     {
                         window.innerWidth > 768
@@ -170,26 +97,28 @@ const Home = () => {
                                 <Navigation />
                             )
                     }
-                    {
-                        window.innerWidth > 768
-                            ? (
-                                <div className="wrapper" style={{ '--columns': columns, '--rows': rows }}>
-                                    {
-                                        createGrid()
-                                    }
+                    <div className="container">
+                        {
+                            window.innerWidth > 768
+                                ? (
+                                    <div className="wrapper" style={{ '--columns': columns, '--rows': rows }}>
+                                        {
+                                            createGrid()
+                                        }
+                                    </div>
+                                ) : null
+                        }
+                        <div className="content">
+                            <div className="left">
+                                <div className='text'>
+                                    Developer & Student based in Dayton, Ohio.
                                 </div>
-                            ) : null
-                    }
-                    <div className="content">
-                        <div className="left">
-                            <div className='text'>
-                                Developer & Student based in Dayton, Ohio.
                             </div>
-                        </div>
-                        <div className="right">
-                            <span>Hello<span>.</span></span>
-                            <span>I am</span>
-                            <span>Yujaw</span>
+                            <div className="right">
+                                <span>Hello<span>.</span></span>
+                                <span>I am</span>
+                                <span>Yujaw</span>
+                            </div>
                         </div>
                     </div>
                 </div>
