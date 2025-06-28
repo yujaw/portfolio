@@ -17,7 +17,7 @@ const Hobby = () => {
                         <div className="item">
                             <div className="text">
                                 <div className="title">Electronics</div>
-                                <div className="sub">As a hobby hobby, I embarked on learning robotics and electronics. My deep fascination with innovation fueled my confidence and drove me to acquire the necessary knowledge and skills.</div>
+                                <div className="sub">As a hobby, I embarked on learning robotics and electronics. My deep fascination with innovation fueled my confidence and drove me to acquire the necessary knowledge and skills.</div>
                             </div>
                             <div className="image-container">
                                 <div className="image">
@@ -25,7 +25,7 @@ const Hobby = () => {
                                 </div>
                             </div>
                         </div>
-                        <br />
+                        {/* <br /> */}
                         <div className="item">
                             <div className="text">
                                 <div className="title">3d Modelling</div>
@@ -37,11 +37,11 @@ const Hobby = () => {
                                 </div>
                             </div>
                         </div>
-                        <br />
+                        {/* <br /> */}
                         <div className="item">
                             <div className="text">
                                 <div className="title">Coding</div>
-                                <div className="sub">Coding is a passion of mine. I developed love for coding since my preteen.</div>
+                                <div className="sub">Coding has been a passion since my early teens. I enjoy solving problems, building things from scratch, and constantly learning new technologies.</div>
                             </div>
                             <div className="image-container">
                                 <div className="image">

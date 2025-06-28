@@ -987,12 +987,13 @@
   body .outreach-container .outreach .content .item .text .title {
     font-size: 2rem;
     font-weight: 600;
-    line-height: 2rem;
+    line-height: 1rem;
     letter-spacing: 0.05rem;
     text-transform: capitalize;
   }
   body .outreach-container .outreach .content .item .text .sub_title {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
+    line-height: 0.5rem;
     font-weight: 100;
   }
   body .outreach-container .outreach .content .item .text .sub {
@@ -1139,7 +1140,7 @@
     letter-spacing: 0.05rem;
   }
   body .hobby-container .hobby .content {
-    padding: 8rem 0 4rem 0;
+    padding: 6rem 0 4rem 0;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1202,6 +1203,12 @@
     pointer-events: none;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  body .hobby-container .hobby .content .item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  body .hobby-container .hobby .content .item:nth-child(even) .text {
+    text-align: right;
   }
   body .hobby-container .hobby .content::before {
     content: "";

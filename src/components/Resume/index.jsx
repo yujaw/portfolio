@@ -105,9 +105,9 @@ const Resume = () => {
                                         </div>
                                         <div className="bottom">
                                             <div className="contents">
-                                                <a href="https://gfive.yujawmanandhar.com.np" target="_blank" rel='noreferrer'>https://gfive.yujawmanandhar.com.np</a>
+                                                <a href="https://github.com/yujaw/gfive" target="_blank" rel='noreferrer'>https://github.com/yujaw/gfive</a>
                                                 <div className="sub">
-                                                    A working fullstack e-commerce web application using MERN stack and deployed it using Github Pages.
+                                                    A full-stack web application built with React, Node.js, and MongoDB, featuring a responsive design and user authentication.
                                                 </div>
                                             </div>
                                         </div>
@@ -127,9 +127,9 @@ const Resume = () => {
                                         </div>
                                         <div className="bottom">
                                             <div className="contents">
-                                                <a href="https://www.yujawmanandhar.com.np">https://www.yujawmanandhar.com.np</a>
+                                                <a href="https://github.com/yujaw/portfolio" target="_blank" rel='noreferrer'>https://github.com/yujaw/portfolio</a>
                                                 <div className="sub">
-                                                    Build a personal portfolio using ReactJS
+                                                    A personal portfolio website showcasing my skills and projects, built with React and styled with CSS.
                                                 </div>
                                             </div>
                                         </div>
