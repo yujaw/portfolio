@@ -19,17 +19,23 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="cont links">
+                        <div className="title">LinkedIn</div>
+                        <div className="content">
+                            <Link to={'https://www.linkedin.com/in/yujaw-manandhar-b8909031a/'} target={'_blank'}>https://www.linkedin.com/in/yujaw-manandhar-b8909031a/</Link>
+                        </div>
+                    </div>
+                    <div className="cont links">
                         <div className="title">Instagram</div>
                         <div className="content">
                             <Link to={'https://www.instagram.com/sayami__yujaw/'} target={'_blank'}>https://www.instagram.com/sayami__yujaw/</Link>
                         </div>
                     </div>
-                    <div className="cont links">
+                    {/* <div className="cont links">
                         <div className="title">Facebook</div>
                         <div className="content">
                             <Link to={'https://www.facebook.com/yujaw.manandhar/'} target={'_blank'}>https://www.facebook.com/yujaw.manandhar/</Link>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </Fragment >

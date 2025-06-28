@@ -16,14 +16,27 @@ const Outreach = () => {
                     <div className="content">
                         <div className="item">
                             <div className="text">
-                                <div className="title">Nepal Scouts </div>
-                                <div className="sub">I joined Nepal Scouts with the dual purpose of aiding others and acquiring essential survival skills for personal growth. Through my involvement with Nepal Scouts, I gained invaluable knowledge in survival techniques crucial for navigating natural disasters.</div>
+                                <div className="title">Nepal Scouts</div>
+                                <div className="sub_title">Member</div>
+                                <div className="sub">As a member of Nepal Scouts, I participated in community service, leadership training, and teamwork-focused activities. Through camps and volunteer projects, I also developed basic survival skills, including knot tying and first aid, while contributing to public awareness and local outreach initiatives.</div>
                             </div>
-                            <div className="image-container">
+                            {/* <div className="image-container">
                                 <div className="image">
                                     <img src="./images/outreach/scout.png" alt="outreach" />
                                 </div>
+                            </div> */}
+                        </div>
+                        <div className="item">
+                            <div className="text">
+                                <div className="title">WSU Hackathon (Feb 2025)</div>
+                                <div className="sub_title">Participant </div>
+                                <div className="sub">As a member of Nepal Scouts, I participated in community service, leadership training, and teamwork-focused activities. Through camps and volunteer projects, I also developed basic survival skills, including knot tying and first aid, while contributing to public awareness and local outreach initiatives.</div>
                             </div>
+                            {/* <div className="image-container">
+                                <div className="image">
+                                    <img src="./images/outreach/scout.png" alt="outreach" />
+                                </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

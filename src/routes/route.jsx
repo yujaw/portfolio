@@ -8,7 +8,6 @@ import About from '../components/About'
 import Outreach from '../components/Outreach'
 import Hobby from '../components/Hobby'
 import Error from '../components/Error'
-import Portfolio from '../components/Portfolio'
 
 const Route = () => {
     const routes = useRoutes([
@@ -43,10 +42,6 @@ const Route = () => {
                             path: '/hobby',
                             element: <Hobby />
                         },
-                        {
-                            path: '/portfolio',
-                            element: <Portfolio />
-                        }
                     ]
                 }, {
                     path: '*',

@@ -3,8 +3,8 @@ import { Fragment } from 'react'
 const Hobby = () => {
     return (
         <Fragment>
-            <section className="personal-container">
-                <div className="personal">
+            <section className="hobby-container">
+                <div className="hobby">
                     <div className="title-container">
                         <div className="title">
                             Hobbies
@@ -16,12 +16,12 @@ const Hobby = () => {
                     <div className="content">
                         <div className="item">
                             <div className="text">
-                                <div className="title">Robotics</div>
-                                <div className="sub">As a personal hobby, I embarked on learning robotics and electronics. My deep fascination with innovation fueled my confidence and drove me to acquire the necessary knowledge and skills.</div>
+                                <div className="title">Electronics</div>
+                                <div className="sub">As a hobby hobby, I embarked on learning robotics and electronics. My deep fascination with innovation fueled my confidence and drove me to acquire the necessary knowledge and skills.</div>
                             </div>
                             <div className="image-container">
                                 <div className="image">
-                                    <img src="./images/personal/electronics.jpg" alt="personal" />
+                                    <img src="./images/hobby/electronics.jpg" alt="hobby" />
                                 </div>
                             </div>
                         </div>
@@ -33,7 +33,7 @@ const Hobby = () => {
                             </div>
                             <div className="image-container">
                                 <div className="image">
-                                    <img src="./images/personal/3dmodelling.png" alt="personal" />
+                                    <img src="./images/hobby/3dmodelling.png" alt="hobby" />
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@ const Hobby = () => {
                             </div>
                             <div className="image-container">
                                 <div className="image">
-                                    <img src="./images/personal/coding.png" alt="personal" />
+                                    <img src="./images/hobby/coding.png" alt="hobby" />
                                 </div>
                             </div>
                         </div>

@@ -14,7 +14,7 @@ const About = () => {
                             </div>
 
                             <div className="content">
-                                I'm Yujaw, a computer engineering student with a deep passion for technology, especially in the realm of penetration testing. As a student, I'm eager to delve deeper into this field and explore its intricacies further.
+                                <span>I'm Yujaw, a computer engineering student with a deep passion for technology, especially in the realm of penetration testing. As a student, I'm eager to delve deeper into this field and explore its intricacies further.</span>
 
                                 <div className="technologies">
                                     <div className="title">Technologies</div>
