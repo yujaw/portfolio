@@ -844,12 +844,13 @@
     width: 100%;
     height: 100%;
     display: flex;
-    padding: 4rem 1rem;
+    align-items: center;
+    padding: 2rem 1rem 0 1rem;
   }
   body .about-container .about-wrapper .about-content .left {
     width: 50%;
     height: 100%;
-    padding: 1rem;
+    padding: 2rem 2rem 2rem 4rem;
   }
   body .about-container .about-wrapper .about-content .left .title {
     font-size: 6rem;
@@ -982,25 +983,25 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
   }
   body .outreach-container .outreach .content .item .text .title {
     font-size: 2rem;
     font-weight: 600;
-    line-height: 1rem;
+    line-height: 2rem;
     letter-spacing: 0.05rem;
     text-transform: capitalize;
   }
   body .outreach-container .outreach .content .item .text .sub_title {
     font-size: 0.8rem;
-    line-height: 0.5rem;
+    line-height: 0.8rem;
     font-weight: 100;
+    margin: 0.25rem 0 0.5rem 0;
   }
   body .outreach-container .outreach .content .item .text .sub {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 300;
     letter-spacing: 0.025rem;
-    line-height: 1.5rem;
+    line-height: 0.9rem;
   }
   body .outreach-container .outreach .content::before {
     content: "";
