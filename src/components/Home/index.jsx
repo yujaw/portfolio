@@ -6,10 +6,56 @@ import Navigation from '../Navigation';
 
 // TODO add a section below home that shows my works
 
+const pi = 3.141592653589793238;
+
 const Home = () => {
     const [columns, setColumns] = useState(0);
     const [rows, setRows] = useState(0);
     //   const [opened, setOpened] = useState(false);
+
+    const handleMouseClick = (e) => {
+        let { clientX, clientY } = e;
+
+        clientX += window.scrollX
+        clientY += window.scrollY
+
+        let col = Math.floor(clientX / 50) + 1;
+        let row = Math.floor(clientY / 50) + 1;
+
+        console.log(`${col}, ${row}`)
+
+        if (col > columns) col = columns;
+
+        if (row > rows) row = rows;
+
+        console.log(`${col}, ${row}`)
+
+        for (let i = 0; i < 360; i += 1) {
+            const rad = i * (pi / 180);
+
+            // console.log(`${Math.cos(rad)}, ${Math.sin(rad)}`)
+
+            let max = Math.max(columns, rows)
+
+            console.log(max)
+
+            setTimeout(() => {
+                for (let j = 1; j < max; j++) {
+                    const x = Math.round(col + j * Math.cos(rad))
+                    const y = Math.round(row + j * Math.sin(rad))
+
+                    // console.log(`${x}, ${y}`)
+
+                    if (x > 0 && x <= columns && y > 0 && y <= rows) {
+                        setTimeout(() => {
+                            tileAnim(x, y);
+                        }, 100);
+                    }
+                }
+            }, i * 3);
+
+        }
+    }
 
     useEffect(() => {
         const newColumns = Math.floor(window.innerWidth / 50);
@@ -45,8 +91,8 @@ const Home = () => {
     };
 
     const tileAnim = (col, row) => {
-        const tileIndex = col + (row - 1) * columns;
-        const tile = document.querySelector(`.tile:nth-child(${tileIndex})`);
+        const tileIndex = col + (row - 1) * columns
+        const tile = document.querySelector(`.tile:nth-child(${tileIndex})`)
 
         if (tile) {
             tile.style.animation = 'hover 1s ease';
@@ -139,7 +185,7 @@ const Home = () => {
     return (
         <Fragment>
             <div className="home-wrapper">
-                <div className="home-container" onMouseMove={handleMouseMove}>
+                <div className="home-container" onMouseMove={handleMouseMove} onClick={handleMouseClick}>
 
                     {
                         window.innerWidth > 768
